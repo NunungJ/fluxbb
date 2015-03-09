@@ -5,7 +5,21 @@ modul Simple Image Upload
 
 # How to install
 
------- 1. create ---------------------------------
+--> 1. CREATE
+
 Folder 'upload'
+
 Copy file insertimg.php in this folder
-2. 
+
+--> 2. OPEN
+
+file include/template/main.tpl
+
+before 
+
+</body>
+
+Add 
+
+<pun_upload>
+
