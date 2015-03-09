@@ -13,7 +13,7 @@ Copy file <strong>insertimg.php</strong> in this folder
 
 file include/template/main.tpl
 
-before <strong>&lt;/body&gt;</strong>
-
 Add &lt;pun_upload&gt;
+
+before <strong>&lt;/body&gt;</strong>
 
