@@ -13,9 +13,7 @@ Copy file <strong>insertimg.php</strong> in this folder
 
 file include/template/main.tpl
 
-before 
-
-</body>
+before <strong></body></strong>
 
 Add 
 
