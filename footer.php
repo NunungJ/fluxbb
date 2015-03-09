@@ -156,8 +156,8 @@ ob_end_clean();
 // END SUBST - <pun_footer>
 
 // simple image upload //
-# if(!isset($pun_upload))$pun_upload='';
-# $tpl_main = str_replace('<pun_upload>',$pun_upload, $tpl_main);
+if(!isset($pun_upload))$pun_upload='';
+$tpl_main = str_replace('<pun_upload>',$pun_upload, $tpl_main);
 // End simple image upload //
 
 
