@@ -39,7 +39,7 @@ $usere=md5($pun_user['username']).md5($pun_user['last_visit']);
 
 $pun_upload = '
 
-<script type="text/javascript">
+&lt;script type="text/javascript"&gt;
 
 if (document.all||document.getElementById){
 
@@ -63,5 +63,6 @@ function winupload(vr1,vr2,vr3)
 
   return false};
 
-</script>
+&lt;/script&gt;
+
 ';
