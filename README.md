@@ -47,11 +47,10 @@ var ule=document.getElementsByTagName("ul");
 
 for(i=0;i<ule.length;i+=1){if(ule[i].className=="bblinks")
 
-{ ule[i].innerHTML+=\'<li><span><a href="upload/insertimg.php?code='.$usere.'" onclick="return 
+{ ule[i].innerHTML+=\'&lt;li&gt;&lt;span&gt;&lt;a href="upload/insertimg.php?code='.$usere.'" onclick="return 
 
-winupload(this.href,\\\'gest\\\',\\\'resizable=yes,location=no,menubar=no,status=no,scrollbars=yes\\\');"><strong>Imag
-
-e</strong></a></span></li>\';
+winupload(this.href,\\\'gest\\\',\\\'resizable=yes,location=no,menubar=no,status=no,scrollbars=yes\\\');"&gt;
+&lt;strong&gt;Image&lt;/strong&gt;&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;\';
 
   break;
 
