@@ -17,8 +17,8 @@ III. OPEN FILE <strong>footer.php</strong>
 
 Add
 
-if(!isset($pun_upload))$pun_upload='';
+<strong>if(!isset($pun_upload))$pun_upload='';</strong>
 
-$tpl_main = str_replace('&lt;pun_upload&gt;',$pun_upload, $tpl_main);
+<strong>$tpl_main = str_replace('&lt;pun_upload&gt;',$pun_upload, $tpl_main);</strong>
 
 before <i><strong>// Close the db connection (and free up any result data)</strong></i>
