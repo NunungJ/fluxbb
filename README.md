@@ -11,13 +11,14 @@ II. OPEN FILE <strong>include/template/main.tpl</strong>
 
 Add <strong>&lt;pun_upload&gt;</strong>
 
-before <strong>&lt;/body&gt;</strong>
+before <i><strong>&lt;/body&gt;</strong></i>
 
 III. OPEN FILE <strong>footer.php</strong>
 
-Add 
+Add
 
-<strong>if(!isset($pun_upload))$pun_upload='';
+if(!isset($pun_upload))$pun_upload='';
 
-$tpl_main = str_replace('&lt;pun_upload&gt;',$pun_upload, $tpl_main);</strong>
+$tpl_main = str_replace('&lt;pun_upload&gt;',$pun_upload, $tpl_main);
 
+before <i><strong>// Close the db connection (and free up any result data)</strong></i>
