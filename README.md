@@ -11,9 +11,7 @@ Copy file <strong>insertimg.php</strong> in this folder
 
 II. OPEN FILE <strong>include/template/main.tpl</strong>
 
-Add 
-
-<strong>&lt;pun_upload&gt;</strong>
+Add <strong>&lt;pun_upload&gt;</strong>
 
 before <i><strong>&lt;/body&gt;</strong></i>
 
@@ -21,9 +19,7 @@ before <i><strong>&lt;/body&gt;</strong></i>
 
 III. OPEN FILE <strong>footer.php</strong>
 
-Add
-
-<strong>if(!isset($pun_upload))$pun_upload='';</strong>
+Add  <strong>if(!isset($pun_upload))$pun_upload='';</strong>
 
 <strong>$tpl_main = str_replace('&lt;pun_upload&gt;',$pun_upload, $tpl_main);</strong>
 
@@ -31,3 +27,25 @@ before <i><strong>// Close the db connection (and free up any result data)</stro
 
 
 
+III. OPEN FILE <strong>header.php</strong>
+
+
+
+after <i><strong>// Output JavaScript to validate form (make sure required fields are filled out)</strong></i>
+
+add 
+<strong>
+$usere=md5($pun_user['username']).md5($pun_user['last_visit']);
+$pun_upload = '
+<script type="text/javascript">
+if (document.all||document.getElementById){
+var ule=document.getElementsByTagName("ul");
+for(i=0;i<ule.length;i+=1){if(ule[i].className=="bblinks")
+{ ule[i].innerHTML+=\'<li><span><a href="upload/insertimg.php?code='.$usere.'" onclick="return winupload(this.href,\\\'gest\\\',\\\'resizable=yes,location=no,menubar=no,status=no,scrollbars=yes\\\');"><strong>Image</strong></a></span></li>\';
+  break;
+}}}else document.write();
+function winupload(vr1,vr2,vr3)
+{ window.open(vr1,vr2,"top=120,left=100,width=800,height=440,vr3");
+  return false};
+</script>
+';
