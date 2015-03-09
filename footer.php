@@ -155,7 +155,7 @@ $tpl_main = str_replace('<pun_footer>', $tpl_temp, $tpl_main);
 ob_end_clean();
 // END SUBST - <pun_footer>
 
-// Simple image upload add //
+// Simple image upload add new //
 if(!isset($pun_upload))$pun_upload='';
 $tpl_main = str_replace('<pun_upload>',$pun_upload, $tpl_main);
 // End simple image upload add //
