@@ -3,13 +3,13 @@ Modification of FluxBB 1.5.8  <strong>modul Simple Image Upload</strong>
 
 <h2>How to install</h2>
 
-1. CREATE
+I. CREATE
 
 Folder 'upload'
 
 Copy file <strong>insertimg.php</strong> in this folder
 
-2. OPEN
+II. OPEN
 
 file include/template/main.tpl
 
