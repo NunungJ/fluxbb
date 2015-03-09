@@ -34,7 +34,7 @@ III. OPEN FILE <strong>header.php</strong>
 after <i><strong>// Output JavaScript to validate form (make sure required fields are filled out)</strong></i>
 
 add 
-<strong>
+
 $usere=md5($pun_user['username']).md5($pun_user['last_visit']);
 
 $pun_upload = '
