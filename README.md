@@ -36,16 +36,32 @@ after <i><strong>// Output JavaScript to validate form (make sure required field
 add 
 <strong>
 $usere=md5($pun_user['username']).md5($pun_user['last_visit']);
+
 $pun_upload = '
+
 <script type="text/javascript">
+
 if (document.all||document.getElementById){
+
 var ule=document.getElementsByTagName("ul");
+
 for(i=0;i<ule.length;i+=1){if(ule[i].className=="bblinks")
-{ ule[i].innerHTML+=\'<li><span><a href="upload/insertimg.php?code='.$usere.'" onclick="return winupload(this.href,\\\'gest\\\',\\\'resizable=yes,location=no,menubar=no,status=no,scrollbars=yes\\\');"><strong>Image</strong></a></span></li>\';
+
+{ ule[i].innerHTML+=\'<li><span><a href="upload/insertimg.php?code='.$usere.'" onclick="return 
+
+winupload(this.href,\\\'gest\\\',\\\'resizable=yes,location=no,menubar=no,status=no,scrollbars=yes\\\');"><strong>Imag
+
+e</strong></a></span></li>\';
+
   break;
+
 }}}else document.write();
+
 function winupload(vr1,vr2,vr3)
+
 { window.open(vr1,vr2,"top=120,left=100,width=800,height=440,vr3");
+
   return false};
+
 </script>
 ';
