@@ -7,11 +7,13 @@ I. CREATE FOLDER <strong>upload</strong>
 
 Copy file <strong>insertimg.php</strong> in this folder
 
+
 II. OPEN FILE <strong>include/template/main.tpl</strong>
 
 Add <strong>&lt;pun_upload&gt;</strong>
 
 before <i><strong>&lt;/body&gt;</strong></i>
+
 
 III. OPEN FILE <strong>footer.php</strong>
 
