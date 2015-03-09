@@ -1,5 +1,5 @@
 # fluxbb
-Modification of FluxBB 1.5.8  <strong>modul Simple Image Upload</strong>
+Modification of FluxBB  <strong>modul Simple Image Upload</strong>
 
 <h2>How to install</h2>
 
@@ -35,7 +35,7 @@ after <i><strong>// Output JavaScript to validate form (make sure required field
 
 add 
 
-<span style="color:blue">
+<span style="color:#0000ff">
 $usere=md5($pun_user['username']).md5($pun_user['last_visit']);<br>
 $pun_upload = '<br>
 &lt;script type="text/javascript"&gt;<br>
