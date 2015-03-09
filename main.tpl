@@ -33,8 +33,10 @@
 </div>
 <div class="end-box"></div>
 </div>
+
 <!-- Simple image upload add new -->
 <pun_upload>
 <!-- End simple image upload add -->
+
 </body>
 </html>
