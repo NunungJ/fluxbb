@@ -9,7 +9,7 @@ Modification of FluxBB 1.5.8
 
 Folder 'upload'
 
-Copy file insertimg.php in this folder
+Copy file <strong>insertimg.php</strong> in this folder
 
 --> 2. OPEN
 
