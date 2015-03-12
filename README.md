@@ -13,7 +13,7 @@ II. OPEN FILE <strong>include/template/main.tpl</strong>
 
 Add 
 
-&lt;pun_upload&gt;
+<i>&lt;pun_upload&gt;</i>
 
 before <i><strong>&lt;/body&gt;</strong></i>
 
@@ -23,9 +23,9 @@ III. OPEN FILE <strong>footer.php</strong>
 
 Add  
 
-if(!isset($pun_upload))$pun_upload='';
+<i>if(!isset($pun_upload))$pun_upload='';
 
-$tpl_main = str_replace('&lt;pun_upload&gt;',$pun_upload, $tpl_main);
+$tpl_main = str_replace('&lt;pun_upload&gt;',$pun_upload, $tpl_main);</i>
 
 before <i><strong>// Close the db connection (and free up any result data)</strong></i>
 
