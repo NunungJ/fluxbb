@@ -35,11 +35,11 @@ III. OPEN FILE <strong>header.php</strong>
 
 
 
-after <i><strong>// Output JavaScript to validate form (make sure required fields are filled out)</strong></i>
+after <i><span style="color: green">// Output JavaScript to validate form (make sure required fields are filled out)</span></i>
 
 add 
 
-<i><span style="color: green">
+<i>
 $usere=md5($pun_user['username']).md5($pun_user['last_visit']);<br>
 $pun_upload = '<br>
 &lt;script type="text/javascript"&gt;<br>
@@ -56,7 +56,7 @@ function winupload(vr1,vr2,vr3)<br>
 return false};<br>
 &lt;/script&gt;<br>
 ';<br>
-</span></i>
+</i>
 
 # RUN
 
