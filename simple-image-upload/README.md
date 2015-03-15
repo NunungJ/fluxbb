@@ -68,6 +68,6 @@ Upload-window<br>
 ![upload-window](https://cloud.githubusercontent.com/assets/11386346/6657983/8e5c3046-cb8d-11e4-98fb-e0011b75ba8b.JPG)
 
 message-window<br>
-![message](https://cloud.githubusercontent.com/assets/11386346/6658062/fcd1e262-cb8f-11e4-8c2c-38fba69512a3.JPG)
+![message](https://cloud.githubusercontent.com/assets/11386346/6658086/d99ab020-cb90-11e4-81fc-b3cd178e0e03.JPG)
 
 
