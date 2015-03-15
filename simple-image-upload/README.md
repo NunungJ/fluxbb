@@ -60,4 +60,10 @@ return false};<br>
 
 # RUN
 
-![upload-key](https://cloud.githubusercontent.com/assets/11386346/6654485/d9f95d3c-cafa-11e4-86d4-21943d956722.JPG)
+upload-key
+![upload-key](https://cloud.githubusercontent.com/assets/11386346/6657981/83b84044-cb8d-11e4-8e97-9e4635681d28.JPG)
+
+
+Upload-window
+![upload-window](https://cloud.githubusercontent.com/assets/11386346/6657983/8e5c3046-cb8d-11e4-98fb-e0011b75ba8b.JPG)
+
