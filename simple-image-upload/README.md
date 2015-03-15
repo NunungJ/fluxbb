@@ -39,7 +39,7 @@ after <i><strong>// Output JavaScript to validate form (make sure required field
 
 add 
 
-<i>
+<i><span style="color: green">
 $usere=md5($pun_user['username']).md5($pun_user['last_visit']);<br>
 $pun_upload = '<br>
 &lt;script type="text/javascript"&gt;<br>
@@ -56,7 +56,7 @@ function winupload(vr1,vr2,vr3)<br>
 return false};<br>
 &lt;/script&gt;<br>
 ';<br>
-</i>
+</span></i>
 
 # RUN
 
