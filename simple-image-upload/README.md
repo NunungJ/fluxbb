@@ -60,10 +60,10 @@ return false};<br>
 
 # RUN
 
-upload-key
+upload-key<br>
 ![upload-key](https://cloud.githubusercontent.com/assets/11386346/6657981/83b84044-cb8d-11e4-8e97-9e4635681d28.JPG)
 
 
-Upload-window
+Upload-window<br>
 ![upload-window](https://cloud.githubusercontent.com/assets/11386346/6657983/8e5c3046-cb8d-11e4-98fb-e0011b75ba8b.JPG)
 
