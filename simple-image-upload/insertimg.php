@@ -1,10 +1,7 @@
 <?php
-/**
- * Copyright (C) 2015 nunungj@gmail.com web: http://fluxbb.w3i.org
-**/
-$maximgsize = 50000;
+$maximgsize = 200000;
 $arimage = array('png'=>'png','gif'=>'gif','jpeg'=>'jpeg','jpg'=>'jpg','jpe'=>'jpe','bmp'=>'bmp','tiff'=>'tiff','tif'=>'tif',
-'swf'=>'swf','psd'=>'psd','iff'=>'iff','wbmp'=>'wbmp','wbm'=>'wbm','xbm'=>'xbm');
+'swf'=>'swf','psd'=>'psd','iff'=>'iff','wbmp'=>'wbmp','wbm'=>'wbm','xbm'=>'xbm','pdf'=>'pdf');
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -12,27 +9,23 @@ $arimage = array('png'=>'png','gif'=>'gif','jpeg'=>'jpeg','jpg'=>'jpg','jpe'=>'j
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Untitled Document</title>
 </head><body>
-<?php 
+<?php
 $code = isset($_GET['code']) ? $_GET['code'] : 0;
 define('PUN_ROOT', dirname(__FILE__).'/../');
-require PUN_ROOT.'include/common.php';
-$result = $db->query('SELECT username,last_visit FROM '.$db->prefix.'users');
-$num_user = $db->num_rows($result);
-for ($i = 0; $i < $num_user; ++$i)
-{ $cur_user = $db->fetch_assoc($result);
-  if(($cur_user['username']!='Guest')&&($code==md5($cur_user['username']).md5($cur_user['last_visit'])))break;
-}
-if($i==$num_user){
-echo '<h1>Not Found</h1>
+require PUN_ROOT.'config.php';
+$nyambung=mysql_connect('localhost',$db_username,$db_password);if($nyambung)
+{ mysql_select_db($db_name);
+  $baca=mysql_query("SELECT username,last_visit FROM ".$db_prefix."users");
+  while($sq1=mysql_fetch_row($baca))
+  { if(($sq1[0]!='Guest')&&($code==md5($sq1[0]).md5($sq1[1])))
+    {$cod='Oke';break;}
+  }//$cod='Data base Error !';
+}else $cod='Data base Error !';
+if($cod!='Oke'){
+echo '<h1>'.$code.'</h1>
 <p>The requested URL '.$_SERVER['PHP_SELF'].' was not found on this server.</p>
 </body></html';
-$db->close();
-exit;
-}
-if($pun_user['is_guest']){
-echo '<h1>Re login, Pleace !</h1>
-</body></html';
-$db->close();
+if($nyambung)mysql_close($nyambung);
 exit;
 }
 //echo 'code = '.$code."\n"; echo 'md5 = '.md5($cur_user['username']).md5($cur_user['last_visit']);
@@ -44,7 +37,7 @@ exit;
 #fileview div{display:block;float:left;margin-right:4px}
 </style>
 </head><body>
-<?php $dir = $cur_user['username'].'/';
+<?php $dir = str_replace(' ','_',$sq1[0]).'/';
 $filnya = scandir($dir);$filenya = array();
 foreach($filnya as $vra => $vrb)array_push($filenya,strtolower($vrb));
 
@@ -53,13 +46,13 @@ if((isset($_FILES['imgfile']))&&($_FILES['imgfile']["error"]==0))
 { $filetype=explode('/',$_FILES['imgfile']['type']);
   if(!array_search(strtolower($filetype[1]),$arimage))$Err_upload='The file you tried to upload is not of an allowed type.';
   if((!$Err_upload)&&($_FILES['imgfile']["size"] > $maximgsize))$Err_upload='The file you tried to upload is larger than the maximum allowed';
-  $file_upload = basename($_FILES['imgfile']['name']);
+  $file_upload = strtolower(basename($_FILES['imgfile']['name']));
   if((!$Err_upload)&&(file_exists($dir.$file_upload)))$Err_upload='Already contains a file named "'.$_FILES['imgfile']['name'].'"';
   if((!$Err_upload)&&(!move_uploaded_file($_FILES['imgfile']['tmp_name'], $dir.$file_upload)))$Err_upload='The server was unable to save the uploaded file. Please contact the forum administrator at';
 } else $Err_upload='No upload : You did not select a file for upload.';
 if(isset($_POST['hidden']))
 { if(!$Err_upload)
-  { array_push($filenya,basename($_FILES['imgfile']['name']));
+  { array_push($filenya,$file_upload);
 	$Err_upload = 'Upload Succes';
   } else
   { if($_POST['hidden']!='hidden')
