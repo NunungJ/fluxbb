@@ -37,7 +37,7 @@ exit;
 #fileview div{display:block;float:left;margin-right:4px}
 </style>
 </head><body>
-<?php $dir = str_replace(' ','_',$sq1[0]).'/';
+<?php $dir = strtolower(str_replace(' ','_',$sq1[0])).'/';
 $filnya = scandir($dir);$filenya = array();
 foreach($filnya as $vra => $vrb)array_push($filenya,strtolower($vrb));
 
