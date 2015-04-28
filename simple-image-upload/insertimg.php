@@ -38,10 +38,12 @@ exit;
 </style>
 </head><body>
 <?php $dir = strtolower(str_replace(' ','_',$sq1[0])).'/';
-$filnya = scandir($dir);$filenya = array();
+if(!is_dir($dir))mkdir($dir);
+$filnya = scandir($dir);
+$filenya = array();
+
 foreach($filnya as $vra => $vrb)array_push($filenya,strtolower($vrb));
 
-if(!$filenya) mkdir($dir);
 if((isset($_FILES['imgfile']))&&($_FILES['imgfile']["error"]==0))
 { $filetype=explode('/',$_FILES['imgfile']['type']);
   if(!array_search(strtolower($filetype[1]),$arimage))$Err_upload='The file you tried to upload is not of an allowed type.';
